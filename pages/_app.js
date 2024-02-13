@@ -1,4 +1,5 @@
 import { ChakraProvider } from '@chakra-ui/react';
+import 'regenerator-runtime/runtime'
 import '../styles/camera.css';
 
 function MyApp({ Component, pageProps }) {

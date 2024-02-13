@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import MicWrapper from "./components/micwrapper";
+import AiBot from "./components/aibot";
 import {Box, Button, Center, Flex, useMediaQuery, Heading, Divider} from "@chakra-ui/react";
 import { Camera } from "react-camera-pro";
 
@@ -10,8 +11,6 @@ const Home = () => {
   const [mobileScreen] = useMediaQuery('(min-width: 600px)');
   const [ratio, setRatio] = useState(9 / 16);
   const [numberOfCameras, setNumberOfCameras] = useState(0);
-
-  // const CameraComp = dynamic(() => Camera, { ssr: false });
 
   useEffect(()=>{
     if(mobileScreen){
@@ -43,7 +42,7 @@ const Home = () => {
           <MicWrapper />
         </Flex>
         <Flex w={"30%"} bg={"#f0f0f0"} justifyContent={"center"} alignItems={"center"}>
-          <MicWrapper />
+          <AiBot />
         </Flex>
       </Flex>
     </Flex>
